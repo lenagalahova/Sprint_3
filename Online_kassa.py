@@ -87,7 +87,7 @@ class OnlineSalesRegisterCollector:
             int(telephone_number)
         except ValueError:
             raise ValueError('Необходимо ввести цифры')
-        if len(telephone_number) > 10 or len(telephone_number) < 10:
+        if len(str(telephone_number)) > 10 or len(str(telephone_number)) < 10:
             raise ValueError('Необходимо ввести 10 цифр после "+7"')
         return print(f'+7{telephone_number}')
 
